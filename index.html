@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8" />
+  <title>Top Wan Arcade — Game Hub</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#050816" id="theme-color-meta" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <!-- HEADER / NAV -->
+  <header class="site-header" role="banner">
+    <div class="wrap header-inner">
+      <div class="brand-block">
+        <span class="brand-logo">🎮</span>
+        <div>
+          <a href="index.html" class="brand-name">Top Wan Arcade</a>
+          <p class="brand-tagline">Feel the highs and lows of every play.</p>
+        </div>
+      </div>
+
+      <div class="header-actions">
+        <button
+          id="themeToggle"
+          class="badge theme-toggle"
+          type="button"
+          aria-label="Toggle light and dark theme"
+        >
+          🌙 Dark
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN -->
+  <main id="main" class="page">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-text">
+        <h1>Ride the Tilt. Chase the Streak.</h1>
+        <p class="hero-lead">
+          Welcome to <strong>Top Wan Arcade</strong>, a game hub where every win feels like a
+          peak and every loss is just a plot twist in your story. We design our games
+          with Python logic at the core and bring them to life on the web.
+        </p>
+        <p class="hero-lead">
+          Start with simple classics, grow into richer experiences, and track your ups
+          and downs as you go.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#games" class="btn btn-primary">Start Playing</a>
+          <button class="btn btn-ghost" type="button" id="learnMoreBtn">
+            What makes this arcade special?
+          </button>
+        </div>
+      </div>
+
+      <div class="hero-card">
+        <p class="hero-pill">Session Snapshot (Coming Soon)</p>
+        <ul class="hero-stats">
+          <li>
+            <span class="stat-label">Games Played</span>
+            <span class="stat-value">0</span>
+          </li>
+          <li>
+            <span class="stat-label">Best Win Streak</span>
+            <span class="stat-value">—</span>
+          </li>
+          <li>
+            <span class="stat-label">All-time High Score</span>
+            <span class="stat-value">—</span>
+          </li>
+        </ul>
+        <p class="hero-note">
+          Soon, your stats from Python-powered games will appear here — tracked across
+          the entire arcade.
+        </p>
+      </div>
+    </section>
+
+    <!-- GAME MENU -->
+    <section id="games" class="panel">
+      <header class="section-head">
+        <h2>Game Hub</h2>
+        <p class="section-lead">
+          Pick a game card to see details. Some are already in the lab; others are
+          concept prototypes waiting to be forged.
+        </p>
+      </header>
+
+      <div class="game-grid">
+        <!-- Example: existing logical games we know we might keep -->
+        <article class="game-card" data-game="gtn">
+          <div class="game-icon">🎯</div>
+          <h3>Guess the Number</h3>
+          <p>
+            Classic tension: one secret number, limited attempts, and hot/cold hints
+            that make each guess sting or sing.
+          </p>
+          <div class="game-meta">
+            <span class="pill pill-mode">Logic · Solo</span>
+            <span class="pill pill-status">Prototype</span>
+          </div>
+          <button class="btn btn-outline game-launch-btn" type="button">
+            Preview Concept
+          </button>
+        </article>
+
+        <article class="game-card" data-game="rps">
+          <div class="game-icon">✊✋✌️</div>
+          <h3>Rock · Paper · Scissors Arena</h3>
+          <p>
+            Best-of matches, streaks, and flawless victories. Simple moves,
+            psychological warfare.
+          </p>
+          <div class="game-meta">
+            <span class="pill pill-mode">Reflex · Solo</span>
+            <span class="pill pill-status">Prototype</span>
+          </div>
+          <button class="btn btn-outline game-launch-btn" type="button">
+            Preview Concept
+          </button>
+        </article>
+
+        <article class="game-card" data-game="blackjack">
+          <div class="game-icon">🂡</div>
+          <h3>Blackjack Stories</h3>
+          <p>
+            Hit, stand, or bust. We’ll wire the Python engine to track win streaks,
+            naturals, and brutal downswings.
+          </p>
+          <div class="game-meta">
+            <span class="pill pill-mode">Cards · Strategy</span>
+            <span class="pill pill-status pill-soon">In Design</span>
+          </div>
+          <button class="btn btn-outline game-launch-btn" type="button">
+            Preview Concept
+          </button>
+        </article>
+
+        <!-- Placeholder for future games -->
+        <article class="game-card" data-game="mystery">
+          <div class="game-icon">🌀</div>
+          <h3>Mystery Ladder</h3>
+          <p>
+            A future Top Wan original: climbing emotional ladders, taking risks, and
+            seeing how far you can go before it all collapses.
+          </p>
+          <div class="game-meta">
+            <span class="pill pill-mode">Arcade · Hybrid</span>
+            <span class="pill pill-status pill-soon">Coming Soon</span>
+          </div>
+          <button class="btn btn-outline game-launch-btn" type="button" disabled>
+            Locked for now
+          </button>
+        </article>
+      </div>
+    </section>
+
+    <!-- INFO SECTION -->
+    <section class="panel panel-soft">
+      <header class="section-head">
+        <h2>How the Magic Works</h2>
+      </header>
+      <div class="info-layout">
+        <div>
+          <h3>Python at the Core</h3>
+          <p>
+            Each game starts as pure Python logic: rules, randomness, and scoring.
+            That logic can later power different visual skins — web, mobile, or even
+            console-style UIs.
+          </p>
+        </div>
+        <div>
+          <h3>Web as the Stage</h3>
+          <p>
+            HTML, CSS, and JavaScript bring that Python logic to life. We’ll wire API
+            calls between front-end and back-end so every click or move talks to the
+            game engine.
+          </p>
+        </div>
+        <div>
+          <h3>Feels over Pixels</h3>
+          <p>
+            Top Wan Arcade focuses on <em>emotion</em>: feeling a risky hit in
+            Blackjack, the tension of a last guess, or the rush of a streak. Stats and
+            visuals amplify that story.
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <p>© <span id="year"></span> Top Wan Arcade. Crafted with code, chance, and courage.</p>
+      <p class="footer-note">This is an ongoing project — features and games are evolving.</p>
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
