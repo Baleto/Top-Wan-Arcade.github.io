@@ -1,0 +1,110 @@
+/* Theme accent for this game */
+.bj-theme {
+  --game-accent: #f59e0b; /* amber */
+}
+
+/* Square black “screen” */
+.game-shell-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.game-title {
+  margin: 0;
+  font-size: clamp(22px, 2.4vw, 30px);
+}
+
+.game-stage {
+  margin-top: 14px;
+  background: radial-gradient(1200px 500px at 50% 20%, rgba(245,158,11,.14), transparent 60%),
+              #05070b;
+  border: 1px solid color-mix(in oklab, var(--border) 80%, #000 20%);
+  border-radius: 16px;
+  aspect-ratio: 1 / 1;       /* SQUARE */
+  width: min(760px, 100%);
+  margin-inline: auto;
+  padding: 16px;
+  box-shadow: 0 20px 40px rgba(0,0,0,.55), 0 0 0 1px rgba(0,0,0,.4) inset;
+  position: relative;
+  display: grid;
+  align-content: start;
+  gap: 10px;
+}
+
+.fullscreen-btn {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: color-mix(in oklab, var(--panel) 70%, var(--bg) 30%);
+  color: var(--ink);
+  cursor: pointer;
+  box-shadow: 0 10px 20px rgba(0,0,0,.35);
+  transition: transform .12s ease, box-shadow .12s ease, filter .12s ease;
+}
+.fullscreen-btn:hover { transform: translateY(-1px); box-shadow: 0 14px 26px rgba(0,0,0,.45); }
+.fullscreen-btn:active { transform: translateY(1px); box-shadow: 0 7px 14px rgba(0,0,0,.35); }
+
+.hands {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+.hand h2 { margin: 0 0 6px; font-size: 1rem; color: var(--muted); }
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  min-height: 46px;
+}
+
+.card {
+  width: 54px;
+  height: 76px;
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,.12);
+  background: linear-gradient(145deg, rgba(255,255,255,.08), rgba(255,255,255,.03));
+  display: grid;
+  place-items: center;
+  font-weight: 800;
+  color: #fff;
+  box-shadow: 0 12px 22px rgba(0,0,0,.35);
+}
+
+.total { margin: 6px 0 0; color: var(--muted); font-size: .95rem; }
+
+.status {
+  margin-top: auto;
+  padding-top: 10px;
+  border-top: 1px solid rgba(255,255,255,.08);
+  color: color-mix(in oklab, var(--ink) 75%, var(--muted) 25%);
+}
+
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 14px;
+}
+
+.stats-panel { margin-top: 14px; }
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 12px;
+}
+.stat-box {
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 12px;
+  background: color-mix(in oklab, var(--panel) 85%, var(--bg) 15%);
+}
+
+@media (max-width: 720px) {
+  .hands { grid-template-columns: 1fr; }
+  .game-stage { aspect-ratio: 1 / 1; }
+}

@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8" />
+  <title>Sudoku – Top Wan Arcade</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="page-sudoku">
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header" role="banner">
+    <div class="site-header-inner">
+      <a href="index.html" class="brand">TOP WAN <span>ARCADE</span></a>
+      <nav class="site-nav" aria-label="Main navigation">
+        <a href="tic-tac-toe.html"><span>❌ Tic-Tac-Toe</span></a>
+        <a href="sudoku.html" aria-current="page"><span>🧩 Sudoku</span></a>
+        <a href="blackjack-lite.html"><span>🂡 Blackjack Lite</span></a>
+      </nav>
+      <button class="theme-toggle" type="button" data-theme-toggle></button>
+    </div>
+  </header>
+
+  <main id="main" class="container">
+    <section class="game-shell">
+      <header class="game-header">
+        <div>
+          <div class="pill">Sudoku</div>
+          <h1>Calm focus. Sharp logic. One missing number at a time.</h1>
+          <p class="game-tagline">
+            Fill the 9×9 grid so that every row, column, and 3×3 box contains
+            the digits 1 through 9. No guessing—only pure deduction.
+          </p>
+        </div>
+        <div class="inline-actions">
+          <button class="btn btn-primary" id="sdk-new-puzzle">🆕 New Puzzle</button>
+          <button class="btn btn-ghost" id="sdk-check">✅ Check</button>
+          <button class="btn btn-ghost" id="sdk-clear">🧹 Clear</button>
+        </div>
+      </header>
+
+      <section class="sudoku-layout panel" aria-label="Sudoku game">
+        <div class="sudoku-board-wrap">
+          <h2>Board</h2>
+          <div class="sudoku-grid" aria-label="9 by 9 Sudoku grid">
+            <!-- 81 cells – for now all editable; later we’ll lock given clues in JS -->
+            <!-- Row 1 -->
+            <div class="sudoku-cell"><input class="sudoku-input" maxlength="1" inputmode="numeric" /></div>
+            <div class="sudoku-cell"><input class="sudoku-input" maxlength="1" inputmode="numeric" /></div>
+            <div class="sudoku-cell"><input class="sudoku-input" maxlength="1" inputmode="numeric" /></div>
+            <div class="sudoku-cell"><input class="sudoku-input" maxlength="1" inputmode="numeric" /></div>
+            <div class="sudoku-cell"><input class="sudoku-input" maxlength="1" inputmode="numeric" /></div>
+            <div class="sudoku-cell"><input class="sudoku-input" maxlength="1" inputmode="numeric" /></div>
+            <div class="sudoku-cell"><input class="sudoku-input" maxlength="1" inputmode="numeric" /></div>
+            <div class="sudoku-cell"><input class="sudoku-input" maxlength="1" inputmode="numeric" /></div>
+            <div class="sudoku-cell"><input class="sudoku-input" maxlength="1" inputmode="numeric" /></div>
+
+            <!-- Row 2 -->
+            <!-- (Repeat structure for all 81 cells) -->
+            <!-- To keep response shorter, copy-paste the 9 inputs block 9 times in your file. -->
+          </div>
+          <p class="game-tagline" style="text-align:center; margin-top:0.75rem;">
+            Tip: start with rows or boxes that already have many numbers filled.
+          </p>
+        </div>
+
+        <aside>
+          <h2>Tools</h2>
+          <p>
+            Later we can add difficulty levels, hint systems, and automatic
+            validation powered by Python on the backend or in-browser logic.
+          </p>
+          <div style="margin-top:1rem;">
+            <h3>Notes</h3>
+            <p id="sdk-status">
+              Status messages, errors, and “puzzle solved” celebrations will
+              appear here once we wire up the engine.
+            </p>
+          </div>
+        </aside>
+      </section>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Designed for the Top Wan Arcade – Sudoku module.</p>
+  </footer>
+
+  <script src="script.js" defer></script>
+  <!-- Later: sudoku-logic.js or Python integration -->
+</body>
+</html>

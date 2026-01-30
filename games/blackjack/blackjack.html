@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8" />
+  <title>Blackjack Lite — Top Wan Arcade</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="../../style.css" />
+  <link rel="stylesheet" href="./blackjack.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header" role="banner">
+    <div class="wrap header-inner">
+      <div class="brand-block">
+        <span class="brand-logo">🂡</span>
+        <div>
+          <a href="../../index.html" class="brand-name">Top Wan Arcade</a>
+          <p class="brand-tagline">Blackjack Lite — play the swing.</p>
+        </div>
+      </div>
+
+      <div class="header-actions">
+        <button id="themeToggle" class="badge theme-toggle" type="button">🌙 Dark</button>
+        <a class="btn btn-outline" href="../../index.html">← Hub</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main" class="page">
+    <section class="panel game-shell bj-theme">
+      <header class="game-shell-head">
+        <h1 class="game-title">Blackjack Lite</h1>
+
+        <button class="fullscreen-btn" id="fullscreenBtn" type="button" aria-label="Fullscreen">
+          ⛶
+        </button>
+      </header>
+
+      <div class="game-stage" id="stage" aria-label="Blackjack play area">
+        <div class="hands">
+          <div class="hand">
+            <h2>Dealer</h2>
+            <div class="cards" id="dealerCards"></div>
+            <p class="total" id="dealerTotal"></p>
+          </div>
+
+          <div class="hand">
+            <h2>You</h2>
+            <div class="cards" id="playerCards"></div>
+            <p class="total" id="playerTotal"></p>
+          </div>
+        </div>
+
+        <p class="status" id="statusMsg">Press “New Hand” to begin.</p>
+      </div>
+
+      <div class="controls">
+        <button class="btn btn-primary" id="newBtn" type="button">New Hand</button>
+        <button class="btn btn-outline" id="hitBtn" type="button" disabled>Hit</button>
+        <button class="btn btn-outline" id="standBtn" type="button" disabled>Stand</button>
+        <button class="btn btn-ghost" id="statsBtn" type="button">Stats</button>
+      </div>
+
+      <div class="panel panel-soft stats-panel" id="statsPanel" hidden>
+        <h2>Arcade Stats</h2>
+        <div class="stats-grid" id="statsGrid"></div>
+      </div>
+    </section>
+  </main>
+
+  <script src="../../script.js" defer></script>
+  <script src="./blackjack.js" defer></script>
+</body>
+</html>

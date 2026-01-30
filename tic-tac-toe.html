@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8" />
+  <title>Tic-Tac-Toe – Top Wan Arcade</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="page-tictactoe">
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header" role="banner">
+    <div class="site-header-inner">
+      <a href="index.html" class="brand">TOP WAN <span>ARCADE</span></a>
+      <nav class="site-nav" aria-label="Main navigation">
+        <a href="tic-tac-toe.html" aria-current="page"><span>❌ Tic-Tac-Toe</span></a>
+        <a href="sudoku.html"><span>🧩 Sudoku</span></a>
+        <a href="blackjack-lite.html"><span>🂡 Blackjack Lite</span></a>
+      </nav>
+      <button class="theme-toggle" type="button" data-theme-toggle></button>
+    </div>
+  </header>
+
+  <main id="main" class="container">
+    <section class="game-shell">
+      <header class="game-header">
+        <div>
+          <div class="pill">Tic-Tac-Toe</div>
+          <h1>Three in a row, or fall below.</h1>
+          <p class="game-tagline">
+            A fast duel of pattern and prediction. Choose your symbol, claim the
+            center, and outmaneuver your opponent in as few moves as possible.
+          </p>
+        </div>
+        <div class="inline-actions">
+          <button class="btn btn-primary" id="ttt-new-game">🔁 New Game</button>
+          <button class="btn btn-ghost" id="ttt-reset-stats">🧹 Reset Stats</button>
+        </div>
+      </header>
+
+      <section class="panel ttt-layout" aria-label="Tic-Tac-Toe game">
+        <div>
+          <h2>Board</h2>
+          <div class="ttt-board" role="grid" aria-label="Tic-Tac-Toe board">
+            <!-- 9 cells -->
+            <button class="ttt-cell" data-index="0" role="gridcell" aria-label="Cell 1"></button>
+            <button class="ttt-cell" data-index="1" role="gridcell" aria-label="Cell 2"></button>
+            <button class="ttt-cell" data-index="2" role="gridcell" aria-label="Cell 3"></button>
+            <button class="ttt-cell" data-index="3" role="gridcell" aria-label="Cell 4"></button>
+            <button class="ttt-cell" data-index="4" role="gridcell" aria-label="Cell 5"></button>
+            <button class="ttt-cell" data-index="5" role="gridcell" aria-label="Cell 6"></button>
+            <button class="ttt-cell" data-index="6" role="gridcell" aria-label="Cell 7"></button>
+            <button class="ttt-cell" data-index="7" role="gridcell" aria-label="Cell 8"></button>
+            <button class="ttt-cell" data-index="8" role="gridcell" aria-label="Cell 9"></button>
+          </div>
+        </div>
+
+        <aside aria-label="Game status and stats">
+          <h2>Status</h2>
+          <p id="ttt-status">Choose who starts and make the first move.</p>
+
+          <div style="margin-top: 1rem;">
+            <h3>Mode</h3>
+            <div class="inline-actions">
+              <button class="btn" id="ttt-player-vs-player">👥 Player vs Player</button>
+              <button class="btn" id="ttt-player-vs-cpu">🤖 Player vs CPU</button>
+            </div>
+          </div>
+
+          <div style="margin-top: 1rem;">
+            <h3>Scoreboard</h3>
+            <p><strong>X Wins:</strong> <span id="ttt-x-wins">0</span></p>
+            <p><strong>O Wins:</strong> <span id="ttt-o-wins">0</span></p>
+            <p><strong>Draws:</strong> <span id="ttt-draws">0</span></p>
+          </div>
+        </aside>
+      </section>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Designed for the Top Wan Arcade – Tic-Tac-Toe module.</p>
+  </footer>
+
+  <script src="script.js" defer></script>
+  <!-- Later: ttt-logic.js or Python-powered bridge -->
+</body>
+</html>
